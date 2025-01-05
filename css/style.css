@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-bottom: 60px; /* 为固定底部的footer留出空间 */
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* Markdown 内容样式 */
+.markdown-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.markdown-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.markdown-content h2 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+    color: #34495e;
+}
+
+.markdown-content h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    color: #34495e;
+}
+
+.markdown-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.markdown-content ul, 
+.markdown-content ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.markdown-content li {
+    margin-bottom: 0.5rem;
+}
+
+.markdown-content a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.markdown-content a:hover {
+    text-decoration: underline;
+}
+
+.markdown-content code {
+    background-color: #f8f9fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 0.9em;
+}
+
+.markdown-content pre {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.markdown-content pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.markdown-content blockquote {
+    border-left: 4px solid #3498db;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: #666;
+}
+
+.markdown-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+.markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.markdown-content table th,
+.markdown-content table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+}
+
+.markdown-content table th {
+    background-color: #f8f9fa;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
