@@ -1,6 +1,6 @@
 title: 我的GitHub Pages
 description: 个人网站
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minima
 
 # 导航链接
 nav:
@@ -21,6 +21,11 @@ kramdown:
 author:
   name: nds15763
   email: your.email@example.com
+
+# 主题设置
+logo: /assets/img/logo.png # 可以添加您的logo
+show_downloads: false # 是否显示下载按钮
+google_analytics: # 您的Google Analytics跟踪ID
 
 # 其他设置
 timezone: Asia/Shanghai
