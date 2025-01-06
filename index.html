@@ -3,42 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的GitHub Pages</title>
+    <title>API 文档</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>欢迎来到我的网站</h1>
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="assets/logo.png" alt="API Logo">
+        </div>
         <nav>
-            <ul>
-                <li><a href="#about">关于</a></li>
-                <li><a href="#projects">项目</a></li>
-                <li><a href="#contact">联系</a></li>
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="#quick-start">快速开始</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#api-reference">API 参考</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#authentication">认证</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#endpoints">接口端点</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#examples">示例</a>
+                </li>
             </ul>
         </nav>
-    </header>
+    </aside>
 
-    <main>
-        <section id="about">
-            <h2>关于我</h2>
-            <p>这里是关于我的介绍...</p>
-        </section>
+    <main class="main-content">
+        <section id="quick-start" class="api-section">
+            <h1 class="api-title">快速开始</h1>
+            <p class="api-description">欢迎使用我们的 API 文档。本指南将帮助您快速了解和使用我们的 API。</p>
+            
+            <div class="api-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>参数</th>
+                            <th>说明</th>
+                            <th>类型</th>
+                            <th>是否必需</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>api_key</td>
+                            <td>您的 API 密钥</td>
+                            <td>string</td>
+                            <td>是</td>
+                        </tr>
+                        <tr>
+                            <td>format</td>
+                            <td>返回数据格式</td>
+                            <td>string</td>
+                            <td>否</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <section id="projects">
-            <h2>我的项目</h2>
-            <div class="project-grid">
-                <!-- 项目将在这里显示 -->
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-button active">curl</button>
+                    <button class="tab-button">Python</button>
+                    <button class="tab-button">Node.js</button>
+                </div>
+                <div class="code-block">
+                    <pre><code>curl -X POST https://api.example.com/v1/endpoint \
+    -H "Authorization: Bearer YOUR_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d '{"param": "value"}'</code></pre>
+                </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>联系方式</h2>
-            <p>您可以通过以下方式联系我...</p>
+        <section id="api-reference" class="api-section">
+            <h2 class="api-title">API 参考</h2>
+            <p class="api-description">完整的 API 参考文档，包含所有可用的端点和参数说明。</p>
+            <!-- API 参考内容 -->
+        </section>
+
+        <section id="authentication" class="api-section">
+            <h2 class="api-title">认证</h2>
+            <p class="api-description">了解如何获取和使用 API 密钥进行身份验证。</p>
+            <!-- 认证内容 -->
+        </section>
+
+        <section id="endpoints" class="api-section">
+            <h2 class="api-title">接口端点</h2>
+            <p class="api-description">所有可用的 API 端点列表及其详细说明。</p>
+            <!-- 端点列表 -->
+        </section>
+
+        <section id="examples" class="api-section">
+            <h2 class="api-title">示例</h2>
+            <p class="api-description">常见用例和示例代码。</p>
+            <!-- 示例内容 -->
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 我的GitHub Pages. All rights reserved.</p>
-    </footer>
+    <script>
+        // 标签切换功能
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+
+        // 移动端菜单切换
+        const menuToggle = document.createElement('button');
+        menuToggle.classList.add('menu-toggle');
+        menuToggle.innerHTML = '☰';
+        document.body.appendChild(menuToggle);
+
+        menuToggle.addEventListener('click', () => {
+            document.body.classList.toggle('menu-open');
+        });
+    </script>
 </body>
 </html>
